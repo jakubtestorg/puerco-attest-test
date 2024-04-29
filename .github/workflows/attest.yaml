@@ -20,12 +20,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v3
-        with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+      #- name: Login to GitHub Container Registry
+      #  uses: docker/login-action@v3
+      #  with:
+      #    registry: ${{ env.REGISTRY }}
+      #    username: ${{ github.actor }}
+      #    password: ${{ secrets.GITHUB_TOKEN }}
       #- name: Build and push image
       #  id: push
       #  uses: docker/build-push-action@v5.0.0
@@ -41,7 +41,7 @@ jobs:
           # jakubtestorg/attestations/sha256:e3efa96133139eaf23335d6b8aace18c8db9555c026c02d1244ab61af986e181
           subject-name: "test"
           #subject-digest: ${{ GITHUB_SHA }}
-          subject-digest: "sha256:e3efa96133139eaf23335d6b8aace18c8db9555c026c02d1244ab61af986e181"
+          subject-digest: "sha256:fc7d63442527c161ea599729e3f407a3b2b6797343d931919f694e4218eb47ab"
           predicate-type: 'https://trustydev.pkg'
           predicate-path: "predicate.json"
-          push-to-registry: true
+          # push-to-registry: true
