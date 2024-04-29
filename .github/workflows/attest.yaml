@@ -41,7 +41,7 @@ jobs:
           # jakubtestorg/attestations/sha256:e3efa96133139eaf23335d6b8aace18c8db9555c026c02d1244ab61af986e181
           subject-name: "test"
           #subject-digest: ${{ GITHUB_SHA }}
-          subject-digest: 2d47fc7b0296d0ef4742dd9b586fe2e6e7327861
+          subject-digest: "sha256:e3efa96133139eaf23335d6b8aace18c8db9555c026c02d1244ab61af986e181"
           predicate-type: 'https://trustydev.pkg'
           predicate-path: "predicate.json"
           push-to-registry: true
