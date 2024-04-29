@@ -24,7 +24,7 @@ jobs:
         uses: puerco/setup-trusty-attest
       - name: Trusty Attest Score
         run:
-          trusty attest --predicate-only -f predicate.json .
+          trusty attest --predicate-only --file=predicate.json ./repos/go
       - name: Attest
         uses: actions/attest@v1
         id: attest
