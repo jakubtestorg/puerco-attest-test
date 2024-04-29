@@ -21,7 +21,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Trusty Attester
-        uses: puerco/setup-trusty-attest
+        uses: puerco/setup-trusty-attest@8a21c6b49cfc4d8643fd37a53437ee118075d0f2
       - name: Trusty Attest Score
         run:
           trusty attest --predicate-only --file=predicate.json ./repos/go
