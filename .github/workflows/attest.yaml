@@ -1,4 +1,4 @@
-name: sign-attestation
+name: attest
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
   #  branches: [main]
 
 jobs:
-  build:
+  test-attester:
     runs-on: ubuntu-latest
     permissions:
       id-token: write
@@ -30,6 +30,7 @@ jobs:
         id: attest
         with:
           subject-name: "test"
-          subject-digest: "sha256:fc7d63442527c161ea599729e3f407a3b2b6797343d931919f694e4218eb47ab"
+          #subject-digest: "sha256:fc7d63442527c161ea599729e3f407a3b2b6797343d931919f694e4218eb47ab"
+          subject-digest: "sha256:4a80bffe07d74bece13c3b954c6463aa25b36492bdfcfc0f674381e0b43f58c9"
           predicate-type: 'https://trustydev.pkg'
           predicate-path: "predicate.json"
